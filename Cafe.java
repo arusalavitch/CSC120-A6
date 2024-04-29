@@ -1,9 +1,15 @@
+/**
+ * Represents a café building.
+ */
 public class Cafe extends Building {
     private int nCoffeeOunces;
     private int nSugarPackets;
     private int nCreams;
     private int nCups;
 
+    /**
+     * Constructs a Cafe object.
+     */
     public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
         super(name, address, nFloors);
         this.nCoffeeOunces = nCoffeeOunces;
@@ -12,6 +18,7 @@ public class Cafe extends Building {
         this.nCups = nCups;
         System.out.println("You have built a cafe: ☕");
     }
+
 
     public void sellCoffee(int size, int nSugarPackets, int nCreams) {
         if (this.nCoffeeOunces >= size && this.nSugarPackets >= nSugarPackets && this.nCreams >= nCreams && this.nCups >= 1) {
